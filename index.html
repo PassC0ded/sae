@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bluetooth & Sécurité</title>
+    <link rel="stylesheet" href="CSS/CSS.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<header>
+    Bluetooth & Sécurité
+</header>
+
+<body>
+
+    <br/>
+    <img src="images/bluetooth.svg" alt="Logo" width="200" height="200">
+
+    <h1> Qu'est-ce que le Bluetooth? </h1>
+
+    La technologie sans fil Bluetooth est une norme ouverte de communication radiofréquence à courte portée utilisée principalement pour établir des réseaux personnels sans fil (WPAN), et a été intégrée dans de nombreux types d'appareils professionnels et grand public.
+
+    <br/> Le Bluetooth a de nombreuses utilisations pratiques dans notre vie quotidienne :
+
+    <ul>
+        <li>Connecter des périphériques sans fil :
+            <ul>
+                <li>souris, clavier, casque audio, haut-parleurs, etc. Permet d'éviter les câbles entre appareils proches.</li>
+            </ul>
+
+        </li>
+        <li>Transfert de fichiers :
+            <ul>
+                <li>envoyer des photos</li>
+                <li>documents entre smartphone</li>
+                <li>Plus rapide qu'en passant par internet.</li>
+            </ul>
+        </li>
+        <li>Géolocalisation et tracing :
+            <ul>
+                <li>les balises Bluetooth permettent le positionnement précis en intérieur</li>
+                <li>Utile pour le tracing COVID.</li>
+                <li>Utilisé aussi par Google Maps.</li>
+            </ul>
+        </li>
+        <li>Domotique :
+            <ul>
+                <li>commander à distance des objets connectés type ampoule, thermostat, serrure. Le Bluetooth est intégré dans la majorité des appareils smart home.</li>
+            </ul>
+        </li>
+        <li>Réseaux de capteurs
+            <ul>
+                <li>le Bluetooth Low Energy permet la communication entre petits capteurs avec une consommation minimale d'énergie. Utile pour <a href="https://fr.wikipedia.org/wiki/Internet_des_objets"> L'IoT.</a></li>
+            </ul>
+        </li>
+        <li>Audio sans fil :
+            <ul>
+                <li>écouteurs</li>
+                <li>casques</li>
+                <li>enceintes</li>
+                <li>Soundboard</li>
+            </ul>
+        </li>
+        <li>Voiture connectée :
+            <ul>
+                <li>connexion du smartphone au système multimédia</li>
+                <li>diagnostic moteur</li>
+                <li>déverrouillage sans clé</li>
+            </ul>
+        </li>
+        <li>Paiement mobile</li>
+    </ul>
+
+    <h1> L'évolution du Bluetooth </h1>
+
+    <img src="images/tableau.webp" width="800" height="540">
+
+    <br/> Nous constatons que, d'après ce tableau de l'évolution du bluetooth, le débit reste constant et sa sécurité reste la même.
+
+    <br/>
+
+    <h1>Différents modes de sécurité disponibles</h1>
+
+    <ul>
+        <li>Mode 1 :
+            <ul>
+                <li>Ce mode est non sécurisé pour toute opération.</li>
+                <li>Aucune procédure d'initialisation sécurisée, pas d'authentification, ni de chiffrement.</li>
+                <li>Les appareils qui utilisent ce mode ne peuvent communiquer qu'avec les appareils de ce même mode.</li>
+            </ul>
+
+        </li>
+        <li>Mode 2
+            <ul>
+                <li>Fournit un niveau de sécurité au niveau application après établissement d'une liaison avec un autre appareil.</li>
+                <li>Il n'y a aucune procédure sécurisée avant l'établissement d'un canal de communication.</li>
+                <li>Niveau de sécurité implémenté au niveau du protocole minimal d'échange de donnée L2CAP.</li>
+            </ul>
+        </li>
+        <li>Mode 3
+            <ul>
+                <li>Fournit un niveau de sécurité avant l'établissement du canal de communication.</li>
+                <li>Chiffrement sécurisé au niveau de la liaison avec un autre équipement Bluetooth : LMP protocol.</li>
+            </ul>
+        </li>
+        <li> Mode mixte
+            <ul>
+                <li>L'objet peut prendre en charge à la fois des données signées et non signées.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1> Quelles en sont les vulnérabilités ? </h1>
+
+    Avant de parler vulnérabilité, il est important de comprendre comment le Bluetooth fonctionne. Lors de l'appariement, les appareils doivent s'authentifier mutuellement avant de communiquer via un code PIN. L'appariement est sécurisé via des clés AES 128 bits et une authentification à clé publique. Le Bluetooth utilise le chiffrement de flux (algorithme E0) pour protéger les données échangées contre l'écoute. Norme Bluetooth BR/EDR : option de sécurité renforcée pour les données sensibles.
+
+    <br/> Ces mécanismes offrent un bon niveau de sécurité basique si correctement implémentés et configurés.
+    <br/> Maintenant que nous avons en tête les bases du fonctionnement de Bluetooth, voici quelques vulnérabilitée importantes :
+    <ul>
+        <li>Bluebugging : L'attaquant prend le contrôle total d'un appareil Bluetooth sans autorisation de l'utilisateur.</li>
+        <li>Bluesnarfing : L'attaquant accède aux données stockées sur un appareil Bluetooth cible sans permission.</li>
+        <li>Bluejacking (hameçonnage) : Envoi non sollicité de messages ou de cartes de visite électroniques à des appareils Bluetooth à proximité.</li>
+        <li>Blurtooth : Vulnérabilité qui permet une connexion non autorisée à un appareil Bluetooth.</a>
+        </li>
+        <li>DDoS Bluetooth (L2ping) : Inonde un appareil Bluetooth de requêtes de ping pour le perturber.</li>
+        <li>Blueborne : Série de vulnérabilités permettant à un attaquant de prendre le contrôle d'un appareil sans interaction de l'utilisateur </li>
+    </ul>
+    <br/> Le CERTFR a publié un avis de vulnérabilité bluetooth, le 15 décembre 2022, intitulé "Multiples vulnérabilités dans Bluetooth Core Specification". Dans cette publication, nous pouvons trouver deux failles critique dont l'une affecte presque toutes les verisons du bluetooth :
+    <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25837"> CVE-2022-25837.</a> En bref, un attaquant non authentifié pourrait intercepter les informations de connexion entre deux appareils appairé via Bluetooth en utilisant une méthode de manipulation de l'authentification. Cela peut se produire dans certaines circonstances spécifiques et nécessite des manipulations précises de l'attaquant.
+    <a href="https://cert.ssi.gouv.fr/avis/CERTFR-2022-AVI-1107/"> (Publication du CERTFR)</a>
+    <br/>
+    
+
+    <br/>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BdyxNmmnv_g?autoplay=0&mute=1"></iframe>
+        <br/> Exemple d'une attaque bluetooth d'iPhone par spam.
+    </div>
+
+    <br/>
+
+    <h1> Pratiques de sécurité </h1>
+
+    Pour se prémunir des vulnérabilités, il faut :
+    <ul>
+        <li>Rendre les appareils Bluetooth non-détectables quand la fonction n'est pas utilisée.</li>
+        <li>Ne pas accepter de pairing de sources inconnues.</li>
+        <li>Désactiver le Bluetooth quand il n'est pas nécessaire.</li>
+        <li>Chiffrer les communications sensibles via Bluetooth grâce à la norme Bluetooth <a href="https://fr.wikipedia.org/wiki/S%C3%A9curit%C3%A9_des_protocoles_bluetooth"> BR/EDR.</a></li>
+        <li>Mettre à jour firmware et Bluetooth stack des appareils.</li>
+        <li>Utiliser une longueur minimum de clé PIN (8 chiffres ou plus).</li>
+        <li>Éviter d'utiliser des PINs prévisibles comme "0000" ou "1234".</li>
+        <li>Privilégiez des produits de marques reconnues et évitez d'utiliser des appareils dont la sécurité n'a pas été éprouvée.</li>
+    </ul>
+
+    <h1> Sources </h1>
+
+    <a href="https://youtube.com/@lordRocketGod"> @lordRocketGod (YouTube)</a> <br/>
+    <a href="https://fr.wikipedia.org/wiki/Bluetooth"> Wikipedia</a> <br/>
+    <a href="https://www.commentcamarche.net/informatique/technologies/26191-bluetooth-utilisation-caracteristiques-normes/"> commentcamarche</a> <br/>
+    <a href="https://cve.mitre.org"> cve.mitre.org</a> <br/>
+    <br/>
+
+</body>
+
+<footer>
+    Réalisé par Ewen & Thuandat
+</footer>
+
+</html>
